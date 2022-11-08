@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+html, body {
+  width: 100%; height: 100%;
+  /* background: black; */
+  margin: 0; padding: 0;
+  font-family: 'Chakra Petch';
+  
+  background-image: 
+    radial-gradient(ellipse at bottom left, rgba(104,128,138,0.4) 10%, rgba(138,114,76,0) 40%),
+    linear-gradient(to bottom, rgba(57,173,219,.25), rgba(42,60,87,0.4)),
+    linear-gradient(135deg, #670d10, #092756);
+  
 }
 
-.App-logo {
-  height: 40vmin;
+
+.aug-glow, .aug-glow > * {
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
+.aug-glow {
+  filter: drop-shadow(0 0 12px skyblue) drop-shadow(0 0 1px blue);
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.augborder{
+
+  --aug-border: initial;
+  --aug-border-all: 0.15rem;
+  /* padding: 1rem; */
+  --aug-border-bg: #00dfe7;
+  /* background-size: cover;
+  
+
+  --aug-tl: 1.5rem;
+  --aug-tr: 1.5rem;
+  --aug-l: 1rem;
+  --aug-l-extend1: 50%;
+  --aug-r: 1rem;
+  --aug-r-extend1: 50%;
+  --aug-bl: 1rem;
+  --aug-br: 1rem;
+  margin-bottom: 2rem;
+  transform-origin: 50% 50%; */
+}
+
+
+.GridContainer{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+
+.image-wrap {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:relative;
+}
+.image-wrap img {
+  position:absolute;
+  height:auto;
+  width:100%;
+}
+
+
+
+@media (max-width: 575px){
+  .GridContainer{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px){
+  .marginPage{
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 991px){
+  
+  .marginPage{
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 1199px){
+  .marginPage{
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
